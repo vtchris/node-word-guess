@@ -15,12 +15,12 @@ function Word(){
             this.wordArr.push(myletter)
         }
     },
-    this.toString = function(){
+    this.toString = function(remainingGuesses){
        
         let displayWord = "";
         for(var i = 0;i< this.wordArr.length;i++){
            
-            displayWord = displayWord + this.wordArr[i].toString() + " ";
+            displayWord = displayWord + this.wordArr[i].toString(remainingGuesses) + " ";
         }
         return displayWord;
     },
@@ -28,8 +28,9 @@ function Word(){
         for(var i = 0;i< this.wordArr.length;i++){
             this.wordArr[i].guessLetter(userGuess);
         }
-    }
-    
+    },
+    this.remainingGuesses = 8,
+    this.guessedLetters = []    
 
 }
 module.exports = Word;

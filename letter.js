@@ -2,10 +2,10 @@
 function Letter(letter){
     this.letter = letter.toLowerCase(),
     this.guessed = false,
-    this.toString = function(){
+    this.toString = function(remainingGuesses){
         if(this.guessed === true){
             return this.letter;
-        }else if(this.letter === " " || this.letter === "-"){
+        }else if(this.letter === " " || this.letter === "-"  || remainingGuesses <=0){
             return this.letter;
         }else{
             return "_"
