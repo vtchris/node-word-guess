@@ -3,7 +3,12 @@ function Letter(letter){
     this.letter = letter.toLowerCase(),
     this.guessed = false,
     this.toString = function(remainingGuesses){
-        if(this.guessed === true){
+
+        //turnery
+        //return this.guessed ? this.letter: '_'
+
+        //if(this.guessed === true){ WHAT I WROTE
+        if(this.guessed){ //Preferred way
             return this.letter;
         }else if(this.letter === " " || this.letter === "-"  || remainingGuesses <=0){
             return this.letter;

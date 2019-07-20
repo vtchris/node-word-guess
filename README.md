@@ -1,6 +1,6 @@
-#Node Word Guess
+## Node Word Guess
 
-#TECHNOLOGIES
+## TECHNOLOGIES
 <ul>
     <li>JavaScript</li>
     <li>Node.js</li>    
